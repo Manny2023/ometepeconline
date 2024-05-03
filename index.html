@@ -805,27 +805,31 @@ function setEqualizer(action = false){
 </html>
 
 
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>RADIOS 24/7</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
   <!-- Contenido de tu aplicación aquí -->
   <script src="main.js"></script>
-</body>
-</html> _ _
-<script>
 
-  if ('serviceWorker' in navigator) {
-
-    navigator.serviceWorker.register('service-worker.js')
-
-      .then(function(registration) {
-
-        console.log('Service Worker registrado con éxito:', registration);
-
-      })
-
-      .catch(function(error) {
-
-        console.log('Error al registrar el Service Worker:', error);
-
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(function(registration) {
+            console.log('Service Worker registrado con éxito:', registration);
+          })
+          .catch(function(error) {
+            console.log('Error al registrar el Service Worker:', error);
+          });
       });
+    }
+  </script>
+</body>
+</html>
 
   }
 
