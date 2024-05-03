@@ -1,7 +1,11 @@
 {
-  "name": "RADIOS 24/7",
-  "short_name": "RADIOS",
-  "description": "Una aplicación de radio en línea",
+  "name": "Mi PWA",
+  "short_name": "MiPWA",
+  "description": "Una Progressive Web App para demostración",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2196f3",
   "icons": [
     {
       "src": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZr_RS0dyhfbwNPX-d2GmPxKa0aDffNlT0aZeq-tMbbKExMS4iekVJPO1a7Q_6iyI1Eg47iqnbnV8TKYyuXyaIO-fIcWSQj6QJefxthp7faVrQw8p07d-_YLjsAgsIR6OOODpV_zq2Ptk5qL4igUVYoaVVF9Cdtle7Thb9SvA7lF87yW-QQ71pZ4a_XEA/s320/libro.png",
@@ -14,16 +18,9 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#333",
-  "background_color": "#333",
-  "display": "standalone",
-  "orientation": "portrait",
-  "start_url": "/",
   "scope": "/",
-  "related_applications": [
-    {
-      "platform": "play",
-      "url": "https://play.google.com/store/apps/details?id=com.example.radios"
-    }
-  ]
+  "serviceworker": {
+    "src": "/service-worker.js",
+    "scope": "/"
+  }
 }
